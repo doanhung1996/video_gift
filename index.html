@@ -19,7 +19,8 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background: #111;
+    /*background: url('https://images.wallpaperscraft.com/image/heart_paper_figurines_wooden_background_99869_1280x720.jpg');*/
+    background: url('https://images.wallpaperscraft.com/image/hearts_lights_glow_147987_1280x720.jpg');
     -webkit-perspective: 1000px;
     perspective: 1000px;
     -webkit-transform-style: preserve-3d;
@@ -70,7 +71,7 @@ body {
     left: 50%;
     -webkit-transform: translate(-50%, -50%) rotateX(90deg);
     transform: translate(-50%, -50%) rotateX(90deg);
-    color: #fff;
+    color: #8c4509;
 }
 
 #ground {
@@ -86,8 +87,8 @@ body {
 
 #music-container {
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 @-webkit-keyframes spin {
@@ -135,6 +136,8 @@ body {
 }
 
 </style>
+<link rel="stylesheet" href="https://cdn.plyr.io/1.6.16/plyr.css">
+<script src="https://cdn.plyr.io/1.6.16/plyr.js"></script>
 </head>
 <body>
 <div id="drag-container">
@@ -162,17 +165,16 @@ body {
     </video -->
 
     <!-- Text at center of ground -->
-    <p>Chúc Loan một ngày vui vẻ nhá nhá ❤️ ❤️</p>
+    <p>Chúc Loan một ngày vui vẻ nhé hihi ❤️ ❤️</p>
   </div>
   <div id="ground"></div>
-</div>
 
-<div id="music-container"></div>
+</div>
+<div id="music-container">
+  
+</div>
 </body>
 <script type="text/javascript">
-  // Author: Hoang Tran (https://www.facebook.com/profile.php?id=100004848287494)
-// Github verson (1 file .html): https://github.com/HoangTran0410/3DCarousel/blob/master/index.html
-
 
 // You can change global variables here:
 var radius = 240; // how big of the radius
@@ -182,7 +184,7 @@ var imgWidth = 120; // width of images (unit: px)
 var imgHeight = 170; // height of images (unit: px)
 
 // Link of background music - set 'null' if you dont want to play background music
-var bgMusicURL = 'https://api.soundcloud.com/tracks/143041228/stream?client_id=587aa2d384f7333a886010d5f52f302a';
+var bgMusicURL = './mp3/moon-lover.mp3';
 var bgMusicControls = true; // Show UI music control
 
 /*
@@ -246,13 +248,14 @@ if (autoRotate) {
 }
 
 // add background music
-if (bgMusicURL) {
-  document.getElementById('music-container').innerHTML += `
-<audio src="${bgMusicURL}" ${bgMusicControls? 'controls': ''} autoplay loop>    
-<p>If you are reading this, it is because your browser does not support the audio element.</p>
-</audio>
-`;
-}
+// if (bgMusicURL) {
+//   document.getElementById('music-container').innerHTML += `
+// <audio src="${bgMusicURL}" ${bgMusicControls? 'controls': ''} autoplay loop id="music">    
+// <p>If you are reading this, it is because your browser does not support the audio element.</p>
+// </audio>
+// `;
+// }
+
 
 // setup events
 document.onpointerdown = function (e) {
