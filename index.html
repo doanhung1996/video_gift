@@ -20,12 +20,53 @@ body {
     display: -ms-flexbox;
     display: flex;
     /*background: url('https://images.wallpaperscraft.com/image/heart_paper_figurines_wooden_background_99869_1280x720.jpg');*/
-    background: url('https://images.wallpaperscraft.com/image/hearts_lights_glow_147987_1280x720.jpg');
+    /*background: url('https://images.wallpaperscraft.com/image/flowers_branch_blossom_white_89093_1280x720.jpg');*/
+   /* background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     -webkit-perspective: 1000px;
     perspective: 1000px;
     -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+    transform-style: preserve-3d;*/
 }
+
+body {
+      animation: colorchange 50s infinite; /* animation-name followed by duration in seconds*/
+         /* you could also use milliseconds (ms) or something like 2.5s */
+      -webkit-animation: colorchange 50s infinite; /* Chrome and Safari */
+    }
+
+    @keyframes colorchange
+    {
+      0%    {background: url('./background/1.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      10%   {background: url('./background/2.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      20%   {background: url('./background/2.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      30%   {background: url('./background/3.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      40%   {background: url('./background/4.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      50%   {background: url('./background/5.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      60%   {background: url('./background/6.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      70%   {background: url('./background/7.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      80%   {background: url('./background/8.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      90%   {background: url('./background/9.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      95%   {background: url('./background/10.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      100%  {background: url('./background/11.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+    }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%    {background: url('./background/1.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      10%   {background: url('./background/2.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      20%   {background: url('./background/2.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      30%   {background: url('./background/3.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      40%   {background: url('./background/4.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      50%   {background: url('./background/5.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      60%   {background: url('./background/6.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      70%   {background: url('./background/7.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      80%   {background: url('./background/8.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      90%   {background: url('./background/9.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      95%   {background: url('./background/10.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+      100%  {background: url('./background/11.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+    }
 
 #drag-container,
 #spin-container {
@@ -135,11 +176,25 @@ body {
     }
 }
 
+.hide {
+  display: none;
+}
+
 </style>
-<link rel="stylesheet" href="https://cdn.plyr.io/1.6.16/plyr.css">
-<script src="https://cdn.plyr.io/1.6.16/plyr.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 </head>
 <body>
+  <img class="hide" src="./background/1.jpg" alt="">
+  <img class="hide" src="./background/2.jpg" alt="">
+  <img class="hide" src="./background/3.jpg" alt="">
+  <img class="hide" src="./background/4.jpg" alt="">
+  <img class="hide" src="./background/5.jpg" alt="">
+  <img class="hide" src="./background/6.jpg" alt="">
+  <img class="hide" src="./background/7.jpg" alt="">
+  <img class="hide" src="./background/8.jpg" alt="">
+  <img class="hide" src="./background/9.jpg" alt="">
+  <img class="hide" src="./background/10.jpg" alt="">
+  <img class="hide" src="./background/11.jpg" alt="">
 <div id="drag-container">
   <div id="spin-container">
     <!-- Add your images (or video) here -->
