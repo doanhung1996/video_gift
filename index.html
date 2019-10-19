@@ -247,7 +247,7 @@ if (autoRotate) {
   ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
 }
 
-add background music
+// add background music
 if (bgMusicURL) {
   document.getElementById('music-container').innerHTML += `
 <audio src="${bgMusicURL}" ${bgMusicControls? 'controls': ''} autoplay loop id="music">    
